@@ -1,0 +1,59 @@
+name: Update Indexes
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8,12,18 * * 1-5'
+      timezone: 'America/Sao_Paulo'
+
+jobs:
+  update-indicadores:
+    name: Update indicadores
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          show-progress: false
+      - uses: pnpm/action-setup@v4
+        name: Configure PNPM
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          check-latest: true
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Update indicadores.json
+        run: pnpm update-indexes
+      - name: Checking for changes
+        id: check_changes
+        run: |
+          if git diff --exit-code app/assets/indicadores.json; then
+            echo "has_changes=false" >> $GITHUB_ENV
+          else
+            echo "has_changes=true" >> $GITHUB_ENV
+          fi
+      - name: Commit and push changes
+        if: ${{ env.has_changes == 'true' }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add app/assets/indicadores.json
+          git commit -m "Updated indicadores.json on $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Trigger publish workflow
+        if: ${{ env.has_changes == 'true' }}
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'publish.yml',
+              ref: 'master'
+            })
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

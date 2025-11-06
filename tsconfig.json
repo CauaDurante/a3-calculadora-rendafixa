@@ -1,0 +1,10 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  // Path for Vue global types used by Volar/TypeScript server.
+  // This avoids the need to have "vue" declared as a direct dependency
+  // when the project relies on Nuxt to provide Vue at runtime.
+  "vueCompilerOptions": {
+    "globalTypesPath": "./types/vue-global.d.ts"
+  }
+}
