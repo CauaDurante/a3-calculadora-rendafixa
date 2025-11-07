@@ -2,16 +2,19 @@
 Sistema: Calculadora de renda fixa\
 Integrantes: Bernardo Gomes, Cauã Durante, Renato Nagahama e Argel dos Santos
 
-Funcionalidades:\
-- Adicionar aporte inicial
-- Adicionar juros compostos
-- Adicionar taxa Selic
-- Adicionar CDI
-- Adicionar tempo de investimento
-- Calcular valor líquido
+Funcionalidades:
+- Entrada de dados
+- Validação da entrada de dados
+- Calcular rentabilidade da poupança
+- Calcular rentabilidade dos títulos tributáveis (CDB/RDB/LC)
+- Calcular rentabilidade dos títulos isentos (LCI/LCA)
 
-Planejamento de testes\
-Adicionar aporte inicial (Teste manual - Particionamento)\
-Adicionar tempo de investimento (Teste manual - Valor limite)\
-Calcular valor líquido (Teste unitário)
+Funcionalidades a serem testadas:
+- Calcular rentabilidade dos títulos tributáveis
+- Calcular rentabilidade dos títulos isentos
+- Validação da entrada de dados
 
+Testes manuais:
+- Valor da aplicação (Particionamento)
+- Taxas percentuais (Valor limite)
+- Vencimento em dias (Particionamento)
