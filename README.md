@@ -35,3 +35,12 @@ RNF02 - Os resultados devem ser exibidos com 2 casas decimais para manter a exat
 RNF03 - Os resultados devem ser exibidos em um painel com cores simbólicas e intuitivas. (Usabilidade)\
 RNF04 - Para entradas inválidas o sistema deve fornecer um feedback com o erro em questão. (Usabilidade)\
 RNF05 - A entrada de dados e os resultados monetários devem ser formatados no padrão brasileiro - R$. (Usabilidade)\
+
+Casos de uso\
+UC01 - Inserir investimento inicial\
+UC02 - Inserir taxas de base\
+UC03 - Inserir taxas de rendimentos\
+UC04 - Calcular rendimento da poupança\
+UC05 - Calcular rendimento de títulos tributáveis\
+UC06 - Calcular rendimento de títulos não tributáveis\
+UC07 - Mostrar resultado\
