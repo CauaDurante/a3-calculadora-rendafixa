@@ -9,16 +9,6 @@ Funcionalidades:
 - Calcular rentabilidade dos títulos tributáveis (CDB/RDB/LC)
 - Calcular rentabilidade dos títulos isentos (LCI/LCA)
 
-Funcionalidades a serem testadas:
-- Calcular rentabilidade dos títulos tributáveis
-- Calcular rentabilidade dos títulos isentos
-- Validação da entrada de dados
-
-Testes manuais:
-- Valor da aplicação (Particionamento)
-- Taxas percentuais (Valor limite)
-- Vencimento em dias (Particionamento)
-
 Requisitos Funcionais\
 RF01 - O sistema deve permitir o usuário inserir o valor inicial do investimento em Reais.\
 RF02 - O sistema deve permitir o usuários inserir o prazo de vencimento do investimento em dias, meses ou anos.\
@@ -37,10 +27,9 @@ RNF04 - Para entradas inválidas o sistema deve fornecer um feedback com o erro 
 RNF05 - A entrada de dados e os resultados monetários devem ser formatados no padrão brasileiro - R$. (Usabilidade)\
 
 Casos de uso\
-UC01 - Inserir investimento inicial\
-UC02 - Inserir taxas de base\
-UC03 - Inserir taxas de rendimentos\
-UC04 - Calcular rendimento da poupança\
-UC05 - Calcular rendimento de títulos tributáveis\
-UC06 - Calcular rendimento de títulos não tributáveis\
-UC07 - Mostrar resultado\
+UC01 - Inserir dados\
+UC02 - Validar dados\
+UC03 - Calcular rendimento da poupança\
+UC04 - Calcular rendimento de títulos tributáveis\
+UC05 - Calcular rendimento de títulos não tributáveis\
+UC06 - Exibir painel com resultados\
