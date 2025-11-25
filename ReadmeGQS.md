@@ -47,7 +47,7 @@ Validam a entrada de dados e o feedback visual ao usuário.
 * **Acessibilidade:** Verificação de labels e mensagens de erro claras. 
  
 ### Para rodar os testes: 
-```bash 
+
 pnpm test 
  
  
@@ -65,16 +65,16 @@ git clone [https://github.com/SEU_USUARIO/a3-calculadora-rendafixa.git](https://
 cd a3-calculadora-rendafixa 
  
 Instale as dependências: 
-Bash 
+
 pnpm install 
 # ou npm install 
  
 Atualize os índices financeiros (Opcional): 
-Bash 
+
 pnpm update-indexes 
  
 Rode o servidor de desenvolvimento: 
-Bash 
+
 pnpm dev 
  
 Acesse http://localhost:3000 no seu navegador. 
