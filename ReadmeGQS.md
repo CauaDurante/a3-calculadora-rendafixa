@@ -14,20 +14,20 @@ Uma aplicação web moderna para simulação e comparação de investimentos em 
 ## 🎯 Objetivo do Projeto 
  
 Facilitar a vida do investidor brasileiro, oferecendo uma ferramenta transparente que calcula a rentabilidade real de investimentos (descontando IR e IOF automaticamente), comparando: 
-Poupança (com regras de aniversário antiga/nova). 
-CDB / RDB / LC (Títulos tributáveis). 
-LCI / LCA** (Títulos isentos). 
+* **Poupança** (com regras de aniversário antiga/nova). 
+* **CDB / RDB / LC** (Títulos tributáveis). 
+* **LCI / LCA** (Títulos isentos). 
  
 ## 🚀 Tecnologias Utilizadas 
  
 O projeto foi construído sobre uma stack moderna, garantindo performance e manutenibilidade: 
  
-[Nuxt 4](https://nuxt.com/)** (Compatibility Version): Framework Vue híbrido para renderização e otimização. 
-[Vue.js 3](https://vuejs.org/)**: Componentização e reatividade. 
-[Tailwind CSS 4](https://tailwindcss.com/)**: Estilização utilitária e design responsivo. 
-[Pinia](https://pinia.vuejs.org/)**: Gerenciamento de estado global. 
-[Vitest](https://vitest.dev/)**: Framework de testes unitários. 
-[Axios](https://axios-http.com/)**: Cliente HTTP para consumo de APIs. 
+* **[Nuxt 4](https://nuxt.com/)** (Compatibility Version): Framework Vue híbrido para renderização e otimização. 
+* **[Vue.js 3](https://vuejs.org/)**: Componentização e reatividade. 
+* **[Tailwind CSS 4](https://tailwindcss.com/)**: Estilização utilitária e design responsivo. 
+* **[Pinia](https://pinia.vuejs.org/)**: Gerenciamento de estado global. 
+* **[Vitest](https://vitest.dev/)**: Framework de testes unitários. 
+* **[Axios](https://axios-http.com/)**: Cliente HTTP para consumo de APIs. 
  
 --- 
  
@@ -35,19 +35,19 @@ O projeto foi construído sobre uma stack moderna, garantindo performance e manu
  
 A confiabilidade dos cálculos é o pilar deste projeto. Implementamos uma estratégia de testes automatizados cobrindo: 
  
-1. Testes Unitários (Lógica de Negócio) 
+### 1. Testes Unitários (Lógica de Negócio) 
 Validam a matemática financeira crítica, garantindo que o dinheiro do usuário seja calculado corretamente. 
-Cálculo de Juros Compostos:** Validação da fórmula exponencial. 
-Tabela Regressiva de IR:** Testes de valor limite (ex: 180 dias vs 181 dias). 
-Tabela de IOF:** Validação da incidência regressiva nos primeiros 30 dias. 
+* **Cálculo de Juros Compostos:** Validação da fórmula exponencial. 
+* **Tabela Regressiva de IR:** Testes de valor limite (ex: 180 dias vs 181 dias). 
+* **Tabela de IOF:** Validação da incidência regressiva nos primeiros 30 dias. 
  
 ### 2. Testes de Componentes (Interface) 
 Validam a entrada de dados e o feedback visual ao usuário. 
-Inputs: Garantia de que valores negativos ou inválidos são bloqueados. 
-Acessibilidade: Verificação de labels e mensagens de erro claras. 
+* **Inputs:** Garantia de que valores negativos ou inválidos são bloqueados. 
+* **Acessibilidade:** Verificação de labels e mensagens de erro claras. 
  
 ### Para rodar os testes: 
-
+```bash 
 pnpm test 
  
  
@@ -65,16 +65,16 @@ git clone [https://github.com/SEU_USUARIO/a3-calculadora-rendafixa.git](https://
 cd a3-calculadora-rendafixa 
  
 Instale as dependências: 
-
+Bash 
 pnpm install 
 # ou npm install 
  
 Atualize os índices financeiros (Opcional): 
-
+Bash 
 pnpm update-indexes 
  
 Rode o servidor de desenvolvimento: 
-
+Bash 
 pnpm dev 
  
 Acesse http://localhost:3000 no seu navegador. 
