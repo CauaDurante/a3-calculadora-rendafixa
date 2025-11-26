@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Renda Fixa - Projeto A3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="calculator" class="text-blue-600 w-6 h-6"></i>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">RendaFixa<span class="text-blue-600">.Calc</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#funcionalidades" class="text-gray-600 hover:text-blue-600 transition">Funcionalidades</a>
+                    <a href="#tecnologia" class="text-gray-600 hover:text-blue-600 transition">Tecnologia</a>
+                    <a href="#equipa" class="text-gray-600 hover:text-blue-600 transition">Equipa</a>
+                </div>
+                <div>
+                    <a href="https://github.com/CauaDurante/a3-calculadora-rendafixa" target="_blank" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition flex items-center gap-2">
+                        <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <div class="inline-block mb-4 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-semibold border border-blue-100">
+            Projeto de Gestão e Qualidade de Software
+        </div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            Simule investimentos com <br>
+            <span class="gradient-text">precisão e inteligência</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            Uma calculadora robusta para comparar Poupança, CDB e LCI/LCA. 
+            Desenvolvida com foco em qualidade de código, testes automatizados e DevOps.
+        </p>
+        <div class="flex justify-center gap-4 flex-col sm:flex-row">
+            <a href="http://localhost:3000" target="_blank" class="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200 flex items-center justify-center gap-2">
+                <i data-lucide="play" class="w-5 h-5"></i> Usar Calculadora
+            </a>
+            <a href="https://github.com/CauaDurante/a3-calculadora-rendafixa" target="_blank" class="bg-white text-gray-700 border border-gray-200 px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-gray-50 transition flex items-center justify-center gap-2">
+                <i data-lucide="code-2" class="w-5 h-5"></i> Ver Código
+            </a>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">O que a calculadora faz?</h2>
+                <p class="mt-4 text-gray-600">Comparações financeiras complexas simplificadas em segundos.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Comparação Real</h3>
+                    <p class="text-gray-600">Veja lado a lado o rendimento líquido da Poupança vs CDB vs LCI/LCA, já descontando impostos.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                        <i data-lucide="percent" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Imposto Automático</h3>
+                    <p class="text-gray-600">O sistema aplica automaticamente a tabela regressiva de IR (22.5% a 15%) baseada no prazo.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dados Sempre Atuais</h3>
+                    <p class="text-gray-600">Integração com a API do Banco Central para buscar as taxas Selic e CDI atualizadas diariamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais Técnicos (Foco em GQS) -->
+    <section id="tecnologia" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block mb-4 px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm font-semibold">
+                        Qualidade de Software
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6">Engenharia por trás do código</h2>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        Não construímos apenas uma calculadora, construímos um software sustentável e testável.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6 mt-0.5"></i>
+                            <div>
+                                <strong class="block text-white">Automação DevOps</strong>
+                                <span class="text-gray-400">GitHub Actions configurado para atualizar índices financeiros automaticamente 3x ao dia.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6 mt-0.5"></i>
+                            <div>
+                                <strong class="block text-white">Cobertura de Testes</strong>
+                                <span class="text-gray-400">Mais de 40 casos de teste com Vitest, cobrindo regras de negócio e componentes.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6 mt-0.5"></i>
+                            <div>
+                                <strong class="block text-white">Arquitetura Moderna</strong>
+                                <span class="text-gray-400">Desenvolvido com Nuxt 3, TypeScript, Pinia e TailwindCSS.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Code Snippet Visual -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-2xl border border-gray-700 font-mono text-sm overflow-hidden relative">
+                    <div class="flex gap-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="text-gray-300">
+                        <p><span class="text-purple-400">describe</span>(<span class="text-green-400">'Regras de Negócio'</span>, () => {</p>
+                        <p class="pl-4"><span class="text-purple-400">it</span>(<span class="text-green-400">'Deve aplicar IR de 22.5% até 180 dias'</span>, () => {</p>
+                        <p class="pl-8"><span class="text-blue-400">const</span> taxa = <span class="text-yellow-400">getIndexIR</span>(180);</p>
+                        <p class="pl-8"><span class="text-red-400">expect</span>(taxa).<span class="text-blue-400">toBe</span>(22.5);</p>
+                        <p class="pl-4">});</p>
+                        <p class="pl-4 text-gray-500">// Mais 40 testes executados...</p>
+                        <p>});</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-green-900/30 text-green-400 text-xs px-2 py-1 rounded border border-green-900">
+                        PASSING
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipa -->
+    <section id="equipa" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Quem fez acontecer</h2>
+                <p class="mt-4 text-gray-600">Estudantes de Engenharia de Software - UniRitter</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Member 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                        BG
+                    </div>
+                    <h3 class="font-bold text-gray-900">Bernardo Gomes</h3>
+                    <p class="text-sm text-gray-500">Desenvolvedor</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                        CD
+                    </div>
+                    <h3 class="font-bold text-gray-900">Cauã Durante</h3>
+                    <p class="text-sm text-gray-500">Desenvolvedor</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                        RN
+                    </div>
+                    <h3 class="font-bold text-gray-900">Renato Nagahama</h3>
+                    <p class="text-sm text-gray-500">Desenvolvedor</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                        AS
+                    </div>
+                    <h3 class="font-bold text-gray-900">Argel dos Santos</h3>
+                    <p class="text-sm text-gray-500">Desenvolvedor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i data-lucide="calculator" class="text-blue-600 w-5 h-5"></i>
+                <span class="font-semibold text-gray-900">RendaFixa.Calc</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 Projeto Académico A3. Todos os direitos reservados.
+            </p>
+            <div class="flex gap-4">
+                <a href="https://github.com/CauaDurante/a3-calculadora-rendafixa" class="text-gray-400 hover:text-gray-900 transition">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
